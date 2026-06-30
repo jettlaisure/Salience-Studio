@@ -78,10 +78,11 @@
         const displayH = scaledH;
         emailIframe.style.width    = SOURCE_WIDTH + 'px';
         emailIframe.style.height   = fullH + 'px';
-        emailInner.style.transform = `scale(${scale})`;
         emailInner.style.width     = SOURCE_WIDTH + 'px';
+        emailInner.style.height    = fullH + 'px';
+        emailInner.style.transform = `scale(${scale})`;
         emailInner.style.transformOrigin = 'top left';
-        emailOuter.style.height = displayH + 'px';
+        emailOuter.style.height = scaledH + 'px';
       };
 
       try {
