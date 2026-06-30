@@ -15,6 +15,12 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Allow demos to be embedded in iframes (deliverables canvas)
+[[headers]]
+  for = "/demos/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+
 [[headers]]
   for = "/css/*"
   [headers.values]
