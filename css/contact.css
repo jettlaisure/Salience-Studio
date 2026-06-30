@@ -1,0 +1,193 @@
+/* ── Contact Header ── */
+.contact-header {
+  background: var(--color-taupe);
+  padding: var(--space-2xl) var(--section-x) var(--space-xl);
+  border-bottom: var(--border-taupe);
+  max-width: 640px;
+}
+
+.contact-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 9vw, 80px);
+  letter-spacing: 0.025em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-bottom: var(--space-xl);
+}
+
+.contact-intro {
+  font-size: 14px;
+  color: var(--color-body);
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+/* ── Form Section ── */
+.contact-form-section {
+  background: var(--color-brown);
+  padding: var(--space-3xl) var(--section-x);
+  border-top: var(--border-brown);
+}
+
+.contact-form-inner {
+  max-width: 520px;
+}
+
+.form-field {
+  margin-bottom: var(--space-xl);
+}
+
+.form-field label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-warm-brown);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.form-field input[type="text"],
+.form-field select {
+  width: 100%;
+  background: var(--color-taupe);
+  border: var(--border-taupe);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 14px 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-field input[type="text"]::placeholder {
+  color: rgba(15, 13, 11, 0.30);
+}
+
+.form-field input[type="text"]:focus,
+.form-field select:focus {
+  border-color: var(--color-gold);
+}
+
+.form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B6B45' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.form-field select option {
+  background: var(--color-taupe);
+  color: var(--color-cream);
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-cream);
+  text-transform: none;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0.5px solid var(--color-warm-brown);
+  background: transparent;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 7px;
+  border: 0.5px solid var(--color-cream);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.form-submit {
+  margin-top: var(--space-xl);
+}
+
+.form-submit .btn-primary {
+  width: 100%;
+  text-align: center;
+}
+
+/* Honeypot */
+.bot-field { display: none; }
+
+/* Email fallback */
+.contact-email-fallback {
+  margin-top: var(--space-xl);
+  font-size: 12px;
+  color: var(--color-warm-brown);
+}
+
+.contact-email-fallback a {
+  color: var(--color-warm-brown);
+  border-bottom: 0.5px solid var(--color-warm-brown);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-email-fallback a:hover {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+/* ── Success State ── */
+.form-success {
+  display: none;
+  padding: var(--space-xl);
+  border: var(--border-gold);
+  text-align: center;
+}
+
+.form-success.show { display: block; }
+
+.form-success h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.form-success p {
+  font-size: 13px;
+  color: var(--color-body);
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .contact-header { max-width: 100%; }
+}

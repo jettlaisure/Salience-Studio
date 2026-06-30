@@ -1,0 +1,32 @@
+:root {
+  /* Colors */
+  --color-taupe:      #F5F0E8;  /* Primary background — warm off-white */
+  --color-brown:      #EDEAE2;  /* Secondary background — slightly deeper cream */
+  --color-mid:        #D6D0C4;  /* Dividers, ghost elements */
+  --color-warm-brown: #5C5F63;  /* Nav links, secondary labels */
+  --color-body:       #6B6460;  /* Body text */
+  --color-cream:      #0F0D0B;  /* Primary text (now dark on light bg) */
+  --color-gold:       #8B6B45;  /* Single accent — unchanged */
+  --color-black:      #0F0D0B;  /* Deep backgrounds, frames */
+  --color-divider:    #D6D0C4;  /* Borders on light sections */
+  --color-divider-br: #C8C2B8;  /* Borders on secondary sections */
+
+  /* Borders */
+  --border-taupe: 0.5px solid #D6D0C4;
+  --border-brown: 0.5px solid #C8C2B8;
+  --border-gold:  0.5px solid #8B6B45;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-body:    Arial, Helvetica, sans-serif;
+
+  /* Spacing */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   1.5rem;
+  --space-lg:   2rem;
+  --space-xl:   3rem;
+  --space-2xl:  4.5rem;
+  --space-3xl:  6rem;
+  --section-x:  clamp(1.5rem, 5vw, 4rem);
+}

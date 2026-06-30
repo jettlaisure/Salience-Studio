@@ -1,0 +1,91 @@
+/* ── FAQ Page Header ── */
+.faq-header {
+  background: var(--color-taupe);
+  padding: var(--space-2xl) var(--section-x) var(--space-xl);
+  border-bottom: var(--border-taupe);
+}
+
+.faq-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 10vw, 96px);
+  letter-spacing: 0.04em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  line-height: 0.88;
+}
+
+/* ── FAQ Body ── */
+.faq-body {
+  background: var(--color-brown);
+  padding: var(--space-3xl) var(--section-x);
+}
+
+.faq-category {
+  margin-bottom: var(--space-3xl);
+  max-width: 720px;
+}
+
+.faq-category-heading {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--border-gold);
+}
+
+.faq-category details {
+  border-top: var(--border-brown);
+  padding: var(--space-lg) 0;
+}
+
+.faq-category details:last-child {
+  border-bottom: var(--border-brown);
+}
+
+.faq-category summary {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.faq-category summary::-webkit-details-marker { display: none; }
+
+.faq-category summary::after {
+  content: '+';
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--color-gold);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.faq-category details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-category .faq-answer {
+  font-size: 13px;
+  color: var(--color-body);
+  line-height: 1.75;
+  max-width: 580px;
+  padding-top: var(--space-md);
+}
+
+.faq-category .faq-answer a {
+  color: var(--color-gold);
+  border-bottom: 0.5px solid var(--color-gold);
+  transition: opacity 0.2s;
+}
+
+.faq-category .faq-answer a:hover { opacity: 0.75; }

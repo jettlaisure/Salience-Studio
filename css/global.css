@@ -1,0 +1,284 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/bebas-neue/index.css');
+
+/* ── Body ── */
+body {
+  font-family: var(--font-body);
+  background: var(--color-taupe);
+  color: var(--color-cream);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--section-x);
+  background: var(--color-gold);
+  color: var(--color-cream);
+  padding: 8px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  z-index: 200;
+}
+.skip-link:focus { top: 8px; }
+
+/* ── Navigation ── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-taupe);
+  border-bottom: var(--border-taupe);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--section-x);
+  height: 56px;
+}
+
+.nav-wordmark {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.25em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--color-warm-brown);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-cream);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+  padding: 4px 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 0.5px;
+  background: var(--color-cream);
+  width: 100%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Mobile nav overlay */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--color-brown);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.nav-overlay.open { display: flex; }
+
+.nav-overlay a {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 8vw, 52px);
+  letter-spacing: 0.08em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+}
+
+.nav-overlay a:hover { color: var(--color-gold); }
+
+.nav-close {
+  position: absolute;
+  top: 18px;
+  right: var(--section-x);
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  color: var(--color-warm-brown);
+  text-transform: uppercase;
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--color-brown);
+  border-top: var(--border-brown);
+  padding: var(--space-2xl) var(--section-x) var(--space-lg);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: var(--border-brown);
+  flex-wrap: wrap;
+}
+
+.footer-wordmark {
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  color: var(--color-cream);
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav-label {
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--color-mid);
+  margin-bottom: 4px;
+}
+
+.footer-nav-col a {
+  font-size: 11px;
+  color: rgba(15, 13, 11, 0.60);
+  line-height: 2;
+  transition: color 0.2s;
+}
+
+.footer-nav-col a:hover { color: var(--color-cream); }
+
+.footer-base {
+  padding-top: var(--space-md);
+  font-size: 11px;
+  color: rgba(15, 13, 11, 0.35);
+  letter-spacing: 0.06em;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: var(--color-cream);
+  background: var(--color-gold);
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: #7A5A35; }
+
+.btn-secondary {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: var(--color-gold);
+  background: transparent;
+  padding: 12px 28px;
+  border: 0.5px solid var(--color-gold);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.btn-secondary:hover { background: rgba(107, 122, 74, 0.08); }
+
+.btn-ghost {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-warm-brown);
+  text-transform: uppercase;
+  border-bottom: 0.5px solid var(--color-warm-brown);
+  padding-bottom: 3px;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-ghost:hover { color: var(--color-gold); border-bottom-color: var(--color-gold); }
+
+/* ── CTA Strip ── */
+.cta-strip {
+  background: var(--color-taupe);
+  padding: var(--space-3xl) var(--section-x);
+  text-align: center;
+  border-top: var(--border-taupe);
+}
+
+.cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 52px);
+  letter-spacing: 0.06em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.cta-sub {
+  font-size: 14px;
+  color: var(--color-body);
+  max-width: 420px;
+  margin: 0 auto var(--space-xl);
+  line-height: 1.7;
+}
+
+/* ── Section utilities ── */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.section-header {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 32px);
+  letter-spacing: 0.08em;
+  color: var(--color-cream);
+  text-transform: uppercase;
+}
+
+.gold-line {
+  width: 32px;
+  height: 0.5px;
+  background: var(--color-gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+
+  .footer-inner { flex-direction: column; gap: var(--space-xl); }
+  .footer-nav { flex-direction: column; gap: var(--space-lg); }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — Salience Studio</title>
+  <meta name="description" content="{{ description }}">
+  <meta property="og:title" content="{{ title }} — Salience Studio">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://salience.studio{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://salience.studio{{ page.url }}">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="/css/reset.css?v=2">
+  <link rel="stylesheet" href="/css/variables.css?v=2">
+  <link rel="stylesheet" href="/css/global.css?v=2">
+  <link rel="stylesheet" href="/css/blog.css?v=1">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="/index.html" class="nav-wordmark">SALIENCE</a>
+    <div class="nav-links">
+      <a href="/deliverables.html">WORK</a>
+      <a href="/services.html">SERVICES</a>
+      <a href="/blog/" class="active">BLOG</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">CONTACT</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="nav-close" aria-label="Close menu">CLOSE</button>
+    <a href="/deliverables.html">WORK</a>
+    <a href="/services.html">SERVICES</a>
+    <a href="/blog/">BLOG</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/contact.html">CONTACT</a>
+  </div>
+
+  <main id="main">
+
+    <div class="post-header">
+      <div class="post-header-inner">
+        <p class="post-eyebrow">
+          <a href="/blog/" class="post-back">← All Articles</a>
+          <span class="post-category">{{ category }}</span>
+        </p>
+        <h1 class="post-title">{{ title }}</h1>
+        <div class="post-meta">
+          <span>{{ publishedDate | readableDate }}</span>
+          <span class="post-meta-dot">·</span>
+          <span>{{ readingTime }} min read</span>
+        </div>
+      </div>
+    </div>
+
+    <article class="post-body" id="main">
+      <div class="post-body-inner">
+        {{ content | safe }}
+      </div>
+    </article>
+
+    <section class="post-cta">
+      <div class="post-cta-inner">
+        <p class="section-label">Salience Studio</p>
+        <h2 class="post-cta-heading">Want this done for your brand?</h2>
+        <p class="post-cta-sub">We build the full visibility stack for product-based and e-commerce brands — website, SEO, LLM/AEO, press, email, and SMS. No social ads required.</p>
+        <a href="/contact.html" class="btn-primary">START A PROJECT</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-wordmark">SALIENCE</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">NAVIGATE</span>
+          <a href="/deliverables.html">Work</a>
+          <a href="/services.html">Services</a>
+          <a href="/blog/">Blog</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-label">CONTACT</span>
+          <a href="mailto:hello@salience.studio">hello@salience.studio</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 Salience Studio</span>
+    </div>
+  </footer>
+
+  <script src="/js/nav.js" defer></script>
+</body>
+</html>
