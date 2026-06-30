@@ -1,6 +1,4 @@
 demos/bombshell/node_modules/
 demos/bombshell/.git/
-demos/bombshell/dist/*.mov
-demos/bombshell/dist/*.mp4
 node_modules/
 _site/
