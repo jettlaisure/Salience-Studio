@@ -64,8 +64,7 @@
   const emailIframe = document.getElementById('emailIframe');
   const emailInner  = document.getElementById('emailScaleInner');
   const emailOuter  = emailInner && emailInner.parentElement;
-  const SOURCE_WIDTH      = 600; // email template natural width
-  const MAX_EMAIL_DISPLAY = 920; // cap displayed height so it doesn't dwarf the canvas
+  const SOURCE_WIDTH = 600; // email template natural width
 
   if (emailIframe && emailInner && emailOuter) {
     const applyEmailScale = () => {
@@ -76,7 +75,7 @@
       const setDimensions = (fullH) => {
         const scaledH = Math.round(fullH * scale);
         // On mobile let the full email show (page scroll); on desktop cap height
-        const displayH = isMobile() ? scaledH : Math.min(scaledH, MAX_EMAIL_DISPLAY);
+        const displayH = scaledH;
         emailIframe.style.width    = SOURCE_WIDTH + 'px';
         emailIframe.style.height   = fullH + 'px';
         emailInner.style.transform = `scale(${scale})`;

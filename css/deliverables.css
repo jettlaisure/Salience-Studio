@@ -109,16 +109,9 @@
   width: 620px;
 }
 
-/* Brand and SEO stack below PR in the right column */
-.item-brand {
-  left: 1076px;
-  top: 660px;
-  width: 300px;
-}
-
 .item-seo {
   left: 1076px;
-  top: 1160px;
+  top: 60px;
   width: 300px;
 }
 
