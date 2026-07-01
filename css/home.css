@@ -33,7 +33,7 @@
 .hero-body {
   font-size: 14px;
   color: var(--color-body);
-  max-width: 360px;
+  max-width: 560px;
   line-height: 1.65;
   margin-bottom: var(--space-xl);
 }
