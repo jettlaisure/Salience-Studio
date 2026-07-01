@@ -33,9 +33,13 @@
 .hero-body {
   font-size: 14px;
   color: var(--color-body);
-  max-width: 560px;
+  max-width: 520px;
   line-height: 1.65;
   margin-bottom: var(--space-lg);
+}
+
+.hero-body-group {
+  margin-left: calc(var(--space-md) + 2px); /* align with quote text indent */
 }
 
 .hero-quote {
