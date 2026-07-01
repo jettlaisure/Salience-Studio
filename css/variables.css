@@ -18,7 +18,7 @@
 
   /* Typography */
   --font-display: 'Bebas Neue', Impact, sans-serif;
-  --font-body:    Arial, Helvetica, sans-serif;
+  --font-body:    'Courier New', Courier, monospace;
 
   /* Spacing */
   --space-xs:   0.5rem;
