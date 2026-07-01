@@ -12,13 +12,14 @@
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(64px, 10.5vw, 180px);
+  font-size: clamp(52px, 9vw, 160px);
   letter-spacing: 0.03em;
   color: var(--color-cream);
   text-transform: uppercase;
   line-height: 0.92;
   margin-bottom: var(--space-xl);
-  max-width: 16ch;
+  width: 100%;
+  word-break: break-word;
 }
 
 .hero-tagline {
