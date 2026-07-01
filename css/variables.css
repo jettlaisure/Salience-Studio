@@ -18,7 +18,7 @@
 
   /* Typography */
   --font-display: 'Bebas Neue', Impact, sans-serif;
-  --font-body:    'Times New Roman', Times, serif;
+  --font-body:    'Helvetica Neue LT Std', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Spacing */
   --space-xs:   0.5rem;
