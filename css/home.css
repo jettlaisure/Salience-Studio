@@ -35,7 +35,30 @@
   color: var(--color-body);
   max-width: 560px;
   line-height: 1.65;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.hero-quote {
+  border-left: 2px solid var(--color-gold);
+  padding-left: var(--space-md);
+  margin: 0 0 var(--space-xl) 0;
+  max-width: 520px;
+}
+
+.hero-quote p {
+  font-size: 14px;
+  color: #1A1410;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.hero-quote cite {
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 /* ── Intro ── */
