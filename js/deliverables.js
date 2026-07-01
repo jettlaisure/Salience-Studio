@@ -95,10 +95,17 @@
       }
     };
 
-    emailIframe.addEventListener('load', applyEmailScale);
+    emailIframe.addEventListener('load', () => {
+      applyEmailScale();
+      // Re-measure after short delay — CDN-served iframes sometimes report
+      // incomplete scrollHeight right at load time
+      setTimeout(applyEmailScale, 300);
+      setTimeout(applyEmailScale, 1000);
+    });
     window.addEventListener('resize', applyEmailScale);
     if (emailIframe.contentDocument && emailIframe.contentDocument.readyState === 'complete') {
       applyEmailScale();
+      setTimeout(applyEmailScale, 300);
     }
   }
 
